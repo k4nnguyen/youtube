@@ -1,6 +1,10 @@
 i {
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 .side-bar ul {
   list-style-type: none;
   margin: 0;
@@ -83,6 +87,7 @@ i {
   flex-direction: row;
 }
 .side-bar {
+  background-color: #fff;
   display: flex;
   margin-top: 60px;
   height: 95vh;
@@ -96,8 +101,6 @@ i {
 }
 .side-bar::-webkit-scrollbar {
   display: none;
-}
-.side-bar {
 }
 .inner-item-head {
   display: flex;
@@ -148,6 +151,10 @@ i {
   opacity: 70%;
   font-size: 14px;
   margin-top: 5px;
+}
+.video-desc {
+  margin-left: 20px;
+  max-width: 50%;
 }
 .video-more {
   margin-top: 20px;
