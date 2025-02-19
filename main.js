@@ -42,62 +42,23 @@ router
   .on("/music", () => render("<p>Welcome to Music</p>"))
   .on("/watch/:id", (match) => {
     const idd = match.data.id;
-    render(`<img src="/img/img1.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button><br><br><p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore
-  obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa
-  repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita
-  commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae
-  cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae
-  reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi
-  recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam
-  debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus
-  consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto
-  totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-  fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem
-  ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore
-  obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa
-  repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita
-  commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae
-  cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae
-  reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi
-  recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam
-  debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus
-  consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto
-  totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-  fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem
-  ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore
-  obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa
-  repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita
-  commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae
-  cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae
-  reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi
-  recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam
-  debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus
-  consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto
-  totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-  fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem
-  ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore
-  obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa
-  repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita
-  commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae
-  cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae
-  reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi
-  recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam
-  debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus
-  consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto
-  totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-  fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore obcaecati molestiae cumque, optio quam debitis! <br />Lorem
-  ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit quidem expedita commodi recusandae cum, architecto totam eligendi culpa repudiandae reprehenderit ducimus consectetur inventore
-  obcaecati molestiae cumque, optio quam debitis! <br />
-</p>`);
+    if (idd == "001") {
+      render(
+        `<img src="/img/img1.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
+      );
+    } else if (idd == "002") {
+      render(
+        `<img src="/img/img2.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
+      );
+    } else if (idd == "003") {
+      render(
+        `<img src="/img/img3.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
+      );
+    } else if (idd == "004") {
+      render(
+        `<img src="/img/img4.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
+      );
+    }
   })
   .resolve();
 
