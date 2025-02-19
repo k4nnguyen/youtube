@@ -126,6 +126,9 @@ a {
   padding: 10px 20px;
   margin-bottom: 5px;
 }
+.inner-item.active {
+  background-color: #e6e6e6;
+}
 .inner-item:hover {
   background-color: #e6e6e6;
 }
@@ -159,4 +162,22 @@ a {
 .video-more {
   margin-top: 20px;
   opacity: 70%;
+}
+
+.scroll-up {
+  right: 10px;
+  display: flex;
+  position: fixed;
+  padding: 20px;
+  background-color: rgb(79, 172, 254);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  bottom: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-up:hover {
+  margin-bottom: 10px;
 }
