@@ -163,7 +163,12 @@ a {
   margin-top: 20px;
   opacity: 70%;
 }
-
+.copy-text {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(0, 153, 255);
+  color: #fff;
+}
 .scroll-up {
   right: 10px;
   display: flex;
@@ -180,4 +185,8 @@ a {
 }
 .scroll-up:hover {
   margin-bottom: 10px;
+}
+.video-context {
+  font-weight: bold;
+  font-size: 20px;
 }
