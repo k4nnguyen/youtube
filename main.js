@@ -7,19 +7,55 @@ itemSelected1.forEach((item) => {
     this.classList.add("active");
   });
 });
-// Copy ID
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("copy-text")) {
-    const url = window.location.href;
-    const id = url.substring(url.lastIndexOf("/") + 1);
-    navigator.clipboard.writeText(id);
-    alert("Đã copy ID: " + id);
-  } else if (event.target.classList.contains("scroll-up")) {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+// Tắt/bật form login
+const loginButton = document.querySelector(".create-btn");
+const loginForm = document.querySelector(".login");
+loginButton.addEventListener("click", function () {
+  if (loginForm.classList.contains("translate-y-[-100%]")) {
+    loginForm.classList.remove("translate-y-[-100%]", "opacity-0");
+    loginForm.classList.add("translate-y-0", "opacity-100");
+  } else {
+    loginForm.classList.add("translate-y-[-100%]", "opacity-0");
+    loginForm.classList.remove("translate-y-0", "opacity-100");
   }
 });
-// Scroll - up
-
+// check api
+const loginAction = document.querySelector(".apply-btn");
+loginAction.addEventListener("click", function () {
+  const username = document.getElementById("login-inp").value;
+  const password = document.getElementById("pass-inp").value;
+  const hooman = {
+    username,
+    password,
+  };
+  fetch("https://auth-wit.vercel.app/auth/login", {
+    method: "POST",
+    body: JSON.stringify(hooman),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((result) => {
+      if (!result.ok) {
+        throw new Error("Login ERROR");
+      }
+      return result.json();
+    })
+    .then((data) => {
+      alert("Đăng nhập thành công");
+    })
+    .catch((err) => {
+      alert("Đăng nhập thất bại");
+    });
+});
+// tắt/bật grid
+function setGrid(enable) {
+  if (enable) {
+    listVideo.classList.add("grid", "grid-cols-3", "gap-6");
+  } else {
+    listVideo.classList.remove("grid", "grid-cols-3", "gap-6");
+  }
+}
 // Về trang chủ
 listVideo = document.getElementById("list-video");
 if (listVideo) {
@@ -29,35 +65,45 @@ if (listVideo) {
 }
 function render(content) {
   if (content === "home") {
+    setGrid(true);
     document.getElementById("list-video").innerHTML = origin;
   } else {
+    setGrid(false);
     document.getElementById("list-video").innerHTML = content;
   }
 }
-
 router
   .on("/", () => render("home"))
-  .on("/short", () => render(`<p>Welcome to Short</p><video src="/img/song.mp4" type="video/mp4" style="margin-left:50%" autoplay ></video>`))
+  .on("/short", () => render(`<p>Welcome to Short</p><video src="/img/song.mp4" type="video/mp4" style="ml-[200px]" autoplay ></video>`))
   .on("/subscriptions", () => render("<p>Welcome to Subscriptions</p>"))
   .on("/music", () => render(`<p>Welcome to Music</p>`))
   .on("/watch/:id", (match) => {
     const idd = match.data.id;
+    listVideo.classList.remove("grid", "grid-cols-3");
     if (idd == "001") {
-      render(
-        `<img src="/img/img1.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p class="video-context">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed</p><br><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
-      );
+      render(`<div class="col-span-3 w-full flex justify-center">
+        <img src="/img/img1.avif" class="w-[55vw] rounded-lg shadow-lg" />
+      </div>
+      <p class="ml-[5px] mt-[15px] font-bold text-xl col-span-6">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed</p>
+      <br>
+      <p class="ml-[5px] col-span-3">Watching video ID: ${idd}</p>
+      `);
     } else if (idd == "002") {
-      render(
-        `<img src="/img/img2.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p class="video-context">Xin Lỗi</p><br><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
-      );
+      render(`<div class="col-span-3 w-full flex justify-center">
+        <img src="/img/img2.avif" class="w-[55vw] rounded-lg shadow-lg" />
+      </div>
+      <p class="ml-[5px] mt-[15px] font-bold text-xl col-span-6">Xin Lỗi</p>
+      <br>
+      <p class="ml-[5px] col-span-3">Watching video ID: ${idd}</p>
+      `);
     } else if (idd == "036") {
-      render(
-        `<img src="/img/img3.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p class="video-context">I'm 36 steps aheads</p><br><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button><br>363636<br/>363636<br />3636g36<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
-      );
-    } else if (idd == "004") {
-      render(
-        `<img src="/img/img4.avif" class="video-img" style="width: 700px; border-radius: 20px" /><p class="video-context">cong an danh dan</p><br><p>Watching video ID: ${idd}</p><button class="copy-text" style="width: 100px">Copy ID</button><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore est sed molestiae consectetur quod exercitationem. Sint saepe sapiente alias voluptates delectus, sed minima incidunt nisi tempore,porro ducimus architecto at!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>`
-      );
+      render(`<div class="col-span-3 w-full flex justify-center">
+        <img src="/img/img3.avif" class="w-[55vw] rounded-lg shadow-lg" />
+      </div>
+      <p class="ml-[5px] mt-[15px] font-bold text-xl col-span-6">I'm 36 steps aheads</p>
+      <br>
+      <p class="ml-[5px] col-span-3">Watching video ID: ${idd}</p>
+      `);
     }
   })
   .resolve();

@@ -3,203 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/navigo@8.11.1/lib/navigo.min.js"></script>
     <script src="https://kit.fontawesome.com/4c0012046a.js" crossorigin="anonymous"></script>
     <title>Cake Chinese Iutube</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="/web/icons8-facebook-color-16.png" />
-    <link type="image/png" sizes="32x32" rel="icon" href="/web/icons8-facebook-color-32.png" />
-    <link type="image/png" sizes="96x96" rel="icon" href="/web/icons8-facebook-color-96.png" />
-    <link type="image/png" sizes="120x120" rel="icon" href="/web/icons8-facebook-color-120.png" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <!-- Nav-bar -->
-      <div class="nav-bar">
-        <!-- Logo and Menu -->
-        <div class="logo-bar">
-          <i class="fa-solid fa-bars fa-lg" style="margin-right: 20px; transform: translateY(-5px) translateX(-20px)"></i>
-          <a href="/" data-navigo><img src="/img/TikTok_logo.svg.png" style="width: 85px; height: 25px" /></a>
+  <body class="bg-gray-100 font-roboto">
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+      <div class="container mx-auto flex items-center justify-between px-6 py-3">
+        <div class="flex items-center">
+          <i class="fa-solid fa-bars fa-lg mr-4"></i>
+          <a href="/" class="text-lg font-bold" data-navigo>Cake Chinese Iutube</a>
         </div>
-        <!-- Searching -->
-        <div class="search-box" style="display: flex">
-          <div class="search-bar">
-            <input class="inner-search" placeholder="Tìm kiếm" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <i class="fa-solid fa-microphone fa-lg space-left"></i>
+        <div class="flex items-center border rounded-full px-4 py-2 bg-gray-200">
+          <input type="text" placeholder="Tìm kiếm" class="bg-transparent outline-none w-80" />
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
         </div>
-        <!-- Create Video  -->
-        <div class="create-bar">
-          <div class="inner-create">
-            <i class="fa-solid fa-plus fa-xl" style="transform: translateY(8px)"></i>
-            <p>Tạo</p>
+        <div class="flex items-center space-x-4">
+          <div class="create-btn flex items-center bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 cursor-pointer">
+            <i class="fa-solid fa-plus"></i>
+            <span class="ml-2">Tạo</span>
           </div>
-          <i class="inner-logo fa-regular fa-bell fa-xl space-left"></i>
-          <img src="/img/av.jpg" class="inner-profile space-left" style="border-radius: 100px; width: auto; height: 35px" />
+          <i class="fa-regular fa-bell fa-xl"></i>
+          <img src="/img/av.jpg" class="w-10 h-10 rounded-full" />
         </div>
       </div>
     </header>
-    <!-- Side bar -->
-    <div class="main-body">
-      <div class="side-bar">
-        <div class="default-side">
-          <ul>
-            <a href="/" class="inner-item active" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-              <li>Trang chủ</li>
-            </a>
-            <a href="/short" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-film fa-lg"></i></div>
-              <li>Short</li>
-            </a>
-            <a href="/subscriptions" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-brands fa-youtube fa-lg"></i></div>
-              <li>Kênh đăng ký</li>
-            </a>
-            <a href="/music" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-compact-disc fa-lg"></i></div>
-              <li>Youtube Music</li>
-            </a>
-          </ul>
-        </div>
-        <div class="about-me-side">
-          <ul>
-            <a href="/" class="inner-item-head" data-navigo>
-              <li>Bạn</li>
-              <div class="inner-icon"><i class="fa-solid fa-angle-right"></i></div>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-clock-rotate-left fa-lg"></i></div>
-              <li>Video đã xem</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-list fa-lg"></i></div>
-              <li>Danh sách phát</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-brands fa-youtube fa-lg"></i></div>
-              <li>Video của bạn</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-regular fa-clock fa-lg"></i></div>
-              <li>Xem sau</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-thumbs-up fa-lg"></i></div>
-              <li>Video đã thích</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-download fa-lg"></i></div>
-              <li>Nội dung tải xuống</li>
-            </a>
-          </ul>
-        </div>
-        <div class="subscription-side">
-          <ul>
-            <a href="/" class="inner-item-head" data-navigo>
-              <li>Kênh đăng ký</li>
-              <div class="inner-icon"><i class="fa-solid fa-angle-right"></i></div>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><img src="/img/sontung.jpg" alt="" style="width: auto; height: 25px; border-radius: 20px" /></div>
-              <li>Chính Thái Bò</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><img src="/img/thang.jpg" alt="" style="width: auto; height: 25px; border-radius: 20px" /></div>
-              <li>Tiểu đường</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-              <li>Nội dung tải xuống</li>
-            </a>
-            <a href="/" class="inner-item" data-navigo>
-              <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-              <li>Nội dung tải xuống</li>
-            </a>
-          </ul>
-          <div class="subscription-side">
-            <ul>
-              <a href="/" class="inner-item" data-navigo>
-                <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-                <li>Chính Thái Bò</li>
-              </a>
-              <a href="/" class="inner-item" data-navigo>
-                <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-                <li>Tiểu đường</li>
-              </a>
-              <a href="/" class="inner-item" data-navigo>
-                <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-                <li>Nội dung tải xuống</li>
-              </a>
-              <a href="/" class="inner-item" data-navigo>
-                <div class="inner-icon"><i class="fa-solid fa-house fa-lg"></i></div>
-                <li>Nội dung tải xuống</li>
-              </a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- Main content -->
-      <div class="main-content">
-        <ul class="list-video" id="list-video">
-          <a href="/watch/001" data-navigo>
-            <li class="video-info">
-              <img src="/img/img1.avif" class="video-img" style="border-radius: 20px" />
-              <div class="video-desc">
-                <div class="video-title">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed</div>
-                <div class="video-owner">VSOUL</div>
-                <div class="video-more">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed Download/stream “Buồn Hay Vui”: https://VSOUL.12traile.co/BHV</div>
-              </div>
-            </li>
-          </a>
-          <a href="/watch/002" data-navigo>
-            <li class="video-info">
-              <img src="/img/img2.avif" class="video-img" style="border-radius: 20px" />
-              <div class="video-desc">
-                <div class="video-title">Xin Lỗi</div>
-                <div class="video-owner">Thắng</div>
-                <div class="video-more">Provided to YouTube by Thắng</div>
-              </div>
-            </li>
-          </a>
-          <a href="/watch/036" data-navigo>
-            <li class="video-info">
-              <img src="/img/img3.avif" class="video-img" style="border-radius: 20px" />
-              <div class="video-desc">
-                <div class="video-title">I'm 36 steps aheads</div>
-                <div class="video-owner">Nikocado Avocado</div>
-                <div class="video-more">This video will be officially History of YouTube.</div>
-              </div>
-            </li>
-          </a>
-          <a href="/watch/004" data-navigo>
-            <li class="video-info">
-              <img src="/img/img4.avif" class="video-img" style="width: 336px; height: 188px; border-radius: 20px" />
-              <div class="video-desc">
-                <div class="video-title">cong an danh dan</div>
-                <div class="video-owner">???</div>
-                <div class="video-more">Vay la lan cuoi di ben nhau</div>
-              </div>
-            </li>
-          </a>
-          <a href="/watch/005" data-navigo>
-            <li class="video-info">
-              <img src="/img/img1.avif" class="video-img" style="border-radius: 20px" />
-              <div class="video-desc">
-                <div class="video-title">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed</div>
-                <div class="video-owner">VSOUL</div>
-                <div class="video-more">BUỒN HAY VUI - VSOUL x MCK x Obito x Ronboogz x Boyzed Download/stream “Buồn Hay Vui”: https://VSOUL.12traile.co/BHV</div>
-              </div>
-            </li>
-          </a>
-        </ul>
-      </div>
-      <div class="scroll-up"><i class="fa-solid fa-up-long"></i></div>
+    <!-- Login form -->
+    <div class="login transform translate-y-[-100%] opacity-0 flex fixed flex-col bg-blue-300 p-[100px] text-black right-0 mt-[65px] w-[700px] h-[450px] rounded-lg">
+      <label for="login-inp">Tên đăng nhập</label>
+      <input type="text" placeholder="Username" id="login-inp" class="bg-white p-[10px] mb-[50px] rounded-md mt-[5px]" />
+      <label for="pass-inp">Mật khẩu</label>
+      <input type="password" placeholder="Password" id="pass-inp" class="bg-white p-[10px] rounded-md mt-[5px]" />
+      <div class="apply-btn ml-[250px] flex justify-center apply p-[15px] bg-gray-100 rounded-lg mt-[50px] w-[50%] cursor-pointer hover:bg-gray-200">Đăng nhập</div>
     </div>
+    <!-- Sidebar + Main content -->
+    <div class="flex pt-16">
+      <!-- Sidebar -->
+      <aside class="side-bar w-64 bg-white shadow-md h-screen fixed top-16 left-0 overflow-y-auto p-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="/" id="home-btn" class="inner-item block p-3 rounded-lg active hover:bg-gray-200" data-navigo><i class="fa-solid fa-house"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="/short" id="short-btn" class="inner-item block p-3 rounded-lg hover:bg-gray-200" data-navigo><i class="fa-solid fa-film"></i> Short</a>
+          </li>
+          <li>
+            <a href="/subscriptions" id="sub-btn" class="inner-item block p-3 rounded-lg hover:bg-gray-200" data-navigo><i class="fa-brands fa-youtube"></i> Kênh đăng ký</a>
+          </li>
+          <li>
+            <a href="/music" id="music-btn" class="inner-item block p-3 rounded-lg hover:bg-gray-200" data-navigo><i class="fa-solid fa-compact-disc"></i> Youtube Music</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 ml-64 p-6">
+        <ul class="grid grid-cols-3 gap-6" id="list-video">
+          <li class="bg-white p-4 rounded-lg shadow">
+            <a href="/watch/001" data-navigo>
+              <img src="/img/img1.avif" class="rounded-lg w-full" />
+              <div class="mt-2">
+                <h3 class="text-lg font-medium">BUỒN HAY VUI - VSOUL</h3>
+                <p class="text-gray-500 text-sm">VSOUL</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <a href="/watch/002" data-navigo>
+              <img src="/img/img2.avif" class="rounded-lg w-full" />
+              <div class="mt-2">
+                <h3 class="text-lg font-medium">Xin Lỗi</h3>
+                <p class="text-gray-500 text-sm">Thắng</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <a href="/watch/036" data-navigo>
+              <img src="/img/img3.avif" class="rounded-lg w-full" />
+              <div class="mt-2">
+                <h3 class="text-lg font-medium">I'm 36 steps ahead</h3>
+                <p class="text-gray-500 text-sm">Nikocado Avocado</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <script src="main.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>
